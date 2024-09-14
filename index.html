@@ -14,6 +14,11 @@
       referrerpolicy="no-referrer"
     />
     <!-- Font Awesome Icons -->
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Google Font  -->
     <!--
     <style>
       #welcome-section {
@@ -61,21 +66,32 @@
     </footer>
     -->
     <!-- HEADER -->
-    <header class="header">
+     <header data-header class="header"></header>
+    <!-- HEADER -->
+    
+    <!-- TEMPLATE HEADER -->
+     <template id="header">
       <div class="container header-container">
         <div class="container-logo">
           <h2 class="logo">GM</h2>
         </div>
-        <nav class="menu">
+        <nav id="abrir" class="menu">
           <a href="#about" class="menu-link">About</a>
           <a href="#projects" class="menu-link">Projects</a>
           <a href="#contact" class="menu-link">Contact</a>
         </nav>
-        <span class="container-bars">
-          <i class="fa-solid fa-bars bars"></i>
-        </span>
+        <div class="container-btns-menu">
+          <a href="#abrir" class="container-bars">
+            <i class="fa-solid fa-bars bars" data-bars></i>
+          </a>
+          <a href="#cerrar" class="container-xmark d-none">
+            <i class="fa-solid fa-xmark xmark" data-xmark></i>
+          </a>
+        </div>
       </div>
-    </header>
-    <!-- HEADER -->
+      </div>
+     </template>
+     <!-- TEMPLATE HEADER -->
+     <script type="module" src="app.js" defer></script>
   </body>
 </html>
