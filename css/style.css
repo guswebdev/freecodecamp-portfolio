@@ -23,6 +23,7 @@ html {
   font-size: 16px;
   font-family: "Raleway", sans-serif;
   height: 100%;
+  scroll-behavior: smooth;
 }
 *,
 ::after,
@@ -127,6 +128,7 @@ a {
   background-color: var(--color-black);
   width: 100%;
   height: calc(100vh - 4rem);
+  scroll-margin-top: 4rem;
 }
 .hero-container {
   width: 100%;
@@ -204,26 +206,124 @@ a {
   height: 25px;
 }
 @media screen and (min-width: 1024px) {
-  .circle-1 {
-    top: 10%;
-  }
-  .circle-2 {
-    top: 30%;
-  }
-  .circle-3 {
-    top: 40%;
-  }
-  .circle-4 {
-    top: 75%;
-  }
-  .circle-5 {
-    top: 90%;
-  }
-  .circle-6 {
-    top: 95%;
+  .hero {
+    margin-top: 4rem;
   }
 }
 /* Hero */
+/* Hero */
+.contact {
+  background-color: var(--color-black);
+  width: 100%;
+  height: calc(100vh - 8rem);
+}
+.contact-container {
+  width: 100%;
+  height: calc(100vh - 8rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.contact-content {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  color: var(--color-green-dark);
+  z-index: 10;
+}
+.contact-content h2 {
+  color: var(--color-white);
+  font-size: 2.5rem;
+}
+.contact-content h3 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.contact-icon {
+  color: var(--color-white);
+  font-size: 3rem;
+  cursor: pointer;
+}
+.contact-icon:hover {
+  color: var(--color-green-dark);
+}
+
+.contact-circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: crimson;
+  border-radius: 100%;
+}
+.circle-1,
+.circle-4,
+.circle-5 {
+  background-color: var(--color-green-light);
+}
+.circle-2,
+.circle-3,
+.circle-6 {
+  background-color: var(--color-blue-light);
+}
+.circle-1 {
+  top: 5%;
+  left: 80%;
+}
+.circle-2 {
+  top: 20%;
+  left: 15%;
+  width: 25px;
+  height: 25px;
+}
+.circle-3 {
+  top: 30%;
+  left: 70%;
+}
+.circle-4 {
+  top: 65%;
+  left: 30%;
+  width: 25px;
+  height: 25px;
+}
+.circle-5 {
+  top: 80%;
+  left: 70%;
+}
+.circle-6 {
+  top: 85%;
+  left: 5%;
+  width: 25px;
+  height: 25px;
+}
+
+/* Contact */
+
+.empty{
+  width: 100%;
+  height: 4rem;
+}
+
+/* Footer*/
+.footer{
+  width: 100%;
+  height: 4rem;
+  padding: .5rem;
+  background-color: var(--color-blue-dark);
+  color: var(--color-white);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Footer*/
 
 /* --- Utilities --- */
 .container {
@@ -241,3 +341,8 @@ a {
 /* --- Site Styles --- */
 
 /* --- Medias Queries --- */
+@media screen and (min-width: 1024px){
+  .empty {
+    display: none;
+  }
+}
