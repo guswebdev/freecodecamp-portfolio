@@ -211,7 +211,130 @@ a {
   }
 }
 /* Hero */
-/* Hero */
+
+/* Main */
+main {
+  background-color: var(--color-blue-dark);
+  padding: 2rem 0;
+  text-align: center;
+}
+main h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.container-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.project {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+.container-project-img {
+  width: 100%;
+  min-height: 200px;
+  background-image: var(--url-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.img-1 {
+  --url-image: url(../assets/img/proyecto-tributo.png);
+}
+.img-2 {
+  --url-image: url(../assets/img/proyecto-formulario.png);
+}
+.img-3 {
+  --url-image: url(../assets/img/proyecto-documentacion.png);
+}
+.img-4 {
+  --url-image: url(../assets/img/proyecto-landing.png);
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  flex: 1;
+}
+
+.container-project-tags,
+.container-project-links,
+.project-link {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.container-project-tags span {
+  min-width: 75px;
+  padding: 0.5rem;
+  border: var(--color-green-dark) solid thin;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.container-project-tags span:hover {
+  background-color: var(--color-green-dark);
+  color: var(--color-white);
+}
+.container-project-links a {
+  color: var(--color-white);
+  border-bottom: thin solid transparent;
+}
+.container-project-links a:hover {
+  color: var(--color-blue-dark);
+  border-bottom: thin solid var(--color-blue-dark);
+}
+
+.project-link {
+  gap: 0.5rem;
+}
+
+.project-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 1rem;
+  background-color: var(--color-green-dark);
+  border-radius: 0 0 10px 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .container-projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    scroll-margin-top: 4rem;
+  }
+  .container-projects {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+  .project {
+    flex-basis: 30%;
+  }
+}
+/* Main */
+
+/* Contact */
 .contact {
   background-color: var(--color-black);
   width: 100%;
@@ -306,16 +429,16 @@ a {
 
 /* Contact */
 
-.empty{
+.empty {
   width: 100%;
   height: 4rem;
 }
 
 /* Footer*/
-.footer{
+.footer {
   width: 100%;
   height: 4rem;
-  padding: .5rem;
+  padding: 0.5rem;
   background-color: var(--color-blue-dark);
   color: var(--color-white);
   text-align: center;
@@ -341,7 +464,7 @@ a {
 /* --- Site Styles --- */
 
 /* --- Medias Queries --- */
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
   .empty {
     display: none;
   }
